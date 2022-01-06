@@ -8,3 +8,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Pomplan"
 include ':app'
+include ':domain'
