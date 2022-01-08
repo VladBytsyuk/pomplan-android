@@ -27,4 +27,6 @@ value class Time(private val millis: Long = 0L) : Comparable<Time> {
     val seconds: Int get() = (millis % MILLIS_IN_MINUTE / MILLIS_IN_SECOND).toInt()
     val milliseconds: Int get() = (millis % MILLIS_IN_SECOND).toInt()
     val totalMilliseconds: Long get() = millis
+
+    val isEmpty: Boolean get() = millis == 0L
 }
