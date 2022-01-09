@@ -2,6 +2,7 @@ package io.pomplan.domain
 
 class Pomodoro(
     val type: Type,
+    val blockIndex: Int,
     val fullTime: Time,
     val elapsedTime: Time = Time(millis = 0L),
 ) {
@@ -12,6 +13,7 @@ class Pomodoro(
 
     operator fun plus(time: Time) = Pomodoro(
         type = this.type,
+        blockIndex = this.blockIndex,
         fullTime = this.fullTime,
         elapsedTime = this.elapsedTime + time
     )
